@@ -4,17 +4,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Servir arquivos estáticos (HTML, CSS, imagens) a partir do diretório raiz
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Rota principal (index.html)
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Rota opcional para o portfólio
-app.get('/portfolio.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'portfolio.html'));
-});
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
