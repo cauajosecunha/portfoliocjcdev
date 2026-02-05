@@ -1,0 +1,14 @@
+{
+    "name": "portfoliocjcdev",
+    "version": "1.0.0",
+    "description": "Portfólio pessoal de Cauá José Cunha",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "Cauá José Cunha",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
